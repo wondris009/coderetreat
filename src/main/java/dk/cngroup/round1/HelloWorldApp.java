@@ -1,4 +1,4 @@
-package dk.cngroup;
+package dk.cngroup.round1;
 
 import lombok.extern.slf4j.Slf4j;
 
