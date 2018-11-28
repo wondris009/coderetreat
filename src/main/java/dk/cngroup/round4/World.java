@@ -1,6 +1,6 @@
 package dk.cngroup.round4;
 
-import dk.cngroup.round6.Cell2;
+import dk.cngroup.round6.Cell;
 
 import java.util.ArrayList;
 import java.util.List;

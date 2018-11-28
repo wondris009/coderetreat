@@ -6,26 +6,26 @@ import lombok.Getter;
 import java.util.List;
 
 @Data
-public class Cell2 {
+public class Cell {
 
     int x, y;
 
     @Getter
     private boolean isAlive;
 
-    public Cell2(int x, int y) {
+    public Cell(int x, int y) {
         isAlive = true;
         this.x = x;
         this.y = y;
     }
 
-    public Cell2(int x, int y, boolean isAlive) {
+    public Cell(int x, int y, boolean isAlive) {
         this.x = x;
         this.y = y;
         this.isAlive = isAlive;
     }
 
-    public long countN(List<Cell2> list) {
+    public long countN(List<Cell> list) {
         return list.stream().filter(c -> Math.abs(c.x - this.x) <= 1 && Math.abs(c.y - this.y) <= 1).count() - 1;
     }
 

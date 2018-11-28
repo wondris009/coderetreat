@@ -10,7 +10,7 @@ class GameOfLifeSpec extends Specification {
         GameOfLife gameOfLife = new GameOfLife()
 
         when:
-        gameOfLife.addCell(new Cell2(1,1, true))
+        gameOfLife.addCell(new Cell(1,1, true))
 
 
         then:
@@ -20,9 +20,9 @@ class GameOfLifeSpec extends Specification {
     def 'should count all neighbours of selected cell'() {
 
         given:
-        def n0 = new Cell2(1,1, true)
-        def n1 = new Cell2(1,2, true)
-        def n2 = new Cell2(1,0, true)
+        def n0 = new Cell(1,1, true)
+        def n1 = new Cell(1,2, true)
+        def n2 = new Cell(1,0, true)
 
         when:
         def neigh = n0.countN([n1, n2, n0])
@@ -35,9 +35,9 @@ class GameOfLifeSpec extends Specification {
 
         given:
         def world = new GameOfLife()
-        world.addCell(new Cell2(1,1))
-        world.addCell(new Cell2(1,2))
-        world.addCell(new Cell2(1,3))
+        world.addCell(new Cell(1,1))
+        world.addCell(new Cell(1,2))
+        world.addCell(new Cell(1,3))
 
         when:
         world.calculateNewWord()

@@ -5,9 +5,9 @@ import java.util.List;
 
 public class GameOfLife {
 
-    List<Cell2> cells = new ArrayList<>();
+    List<Cell> cells = new ArrayList<>();
 
-    public void addCell(Cell2 cell) {
+    public void addCell(Cell cell) {
         this.cells.add(cell);
     }
 
@@ -32,7 +32,7 @@ public class GameOfLife {
     }
 
     public long getAllLiveCells() {
-        return this.cells.stream().filter(Cell2::isAlive).count();
+        return this.cells.stream().filter(Cell::isAlive).count();
     }
 
 
